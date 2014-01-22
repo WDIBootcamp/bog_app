@@ -32,10 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'bootstrap-sass'
-group :development do
-  gem 'rails_layout'
-end
+
 
 
 # Use ActiveModel has_secure_password

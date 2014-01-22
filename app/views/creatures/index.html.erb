@@ -1,10 +1,35 @@
-Welcome to the Bog
 
-</br>
-  <a href="/creatures/view_all"> View all creatures </a>
+<div class="container title">
+	<div class="row">
+		the Bog
+	</div>
+</div>
 
-</br>
-  <a href="/creatures/new"> Add a creature </a>
+<div class="container options">
+	<div class="row">
+		<ul>
+		<li><a href="/creatures/new"> [ + ] a creature </a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="container all-creatures-cont"
+	<div class="row">
+		<div class="container all-creatures">
+			<% @creatures.each do |creature| %>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="thumbnail each-creature">
+						<a href="/creatures/<%= creature[:id]%>/edit"></br>
+							Name: <%= creature[:name] %> </br>
+							Description: <%= creature[:description] %> </br>
+							ID: <%= creature[:id] %>
+						</a>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
 
 
 

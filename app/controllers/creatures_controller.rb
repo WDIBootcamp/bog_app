@@ -1,5 +1,10 @@
 class CreaturesController < ApplicationController
+  def all_creatures
+  	@creatures = Creature.all 
+  end
+
   def index
+  	all_creatures 
 	render :index
   end
 
@@ -48,6 +53,7 @@ class CreaturesController < ApplicationController
 	creature = Creature.find(id)
 	# creature_to_destroy = params.require(:creature).permit(:name, :description)
 	creature.destroy
+	all_creatures 
 	render :index
   end
 

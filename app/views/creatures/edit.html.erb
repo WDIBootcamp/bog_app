@@ -1,12 +1,20 @@
 <!-- app/views/creatures/edit.html.erb -->
 
+<div class="container edit">
 <form action="/creatures/<%= @creature.id %>" method="post">
 	<input type="hidden" name="_method" value="put">
-	<label>Name</label></br>
+	<span class="on">-----------------</span> <label>Name</label>
 	<input type="text" name="creature[name]" value="<%= @creature.name %>"></br>
-	<label>Description</label></br>
+	<label>Description</label>
 	<textarea name="creature[description]"><%= @creature.description %></textarea><br>
 	<%= token_tag form_authenticity_token %>
  
-	<button> Update! </button>
+	<button> update </button>
+	
+	<form class="delete" action="/creatures/<%= @creature["id"] %>/delete" method="post">
+    <input type="submit" name="" value="Delete this creature.">
+   <%= token_tag form_authenticity_token %>
+   	</form>
+
 </form>
+<div class="container edit"
