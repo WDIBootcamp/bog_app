@@ -1,0 +1,11 @@
+<!-- bog_app/app/views/creatures/create.html.erb -->
+
+<form action="/creatures" method="post">
+	<label>Name</label></br>
+	<input type="text" name="creature[name]"></br>
+	<label>Description</label></br>
+	<textarea name="creature[description]"></textarea></br>
+	<%= token_tag form_authenticity_token %>
+ 
+	<button> Add Creature </button>
+</form>

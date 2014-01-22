@@ -1,0 +1,9 @@
+<h1>Here are all of the available bogs!</h1>
+
+<% @creatures.each do |creature| %>
+	<div></br>
+		Name: <%= creature[:name] %> </br>
+		Description: <%= creature[:description] %> </br>
+		ID: <%= creature[:id] %>
+	</div>
+<% end %>
