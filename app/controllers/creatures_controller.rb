@@ -1,7 +1,6 @@
 class CreaturesController < ApplicationController
   def index
-  	@creatures = Creature.all 
-		render :index
+	render :index
   end
 
   def new
@@ -9,6 +8,7 @@ class CreaturesController < ApplicationController
   end
 
   def view_all
+  	@creatures = Creature.all 
   	render :view_all
   end
 
@@ -41,6 +41,14 @@ class CreaturesController < ApplicationController
 	creature.update_attributes(updated_info)
 	redirect_to "/creatures/#{creature.id}"
 
+  end
+
+  def delete
+  	id = params[:id]
+	creature = Creature.find(id)
+	# creature_to_destroy = params.require(:creature).permit(:name, :description)
+	creature.destroy
+	render :index
   end
 
 

@@ -1,9 +1,15 @@
 <h1>Here are all of the available bogs!</h1>
 
 <% @creatures.each do |creature| %>
-	<div></br>
+	<div>
+	<a href="/creatures/<%= creature[:id] %>"></br>
 		Name: <%= creature[:name] %> </br>
 		Description: <%= creature[:description] %> </br>
 		ID: <%= creature[:id] %>
+	</a>
 	</div>
 <% end %>
+
+
+</br>
+  <a href="/creatures/new"> Add a creature </a>

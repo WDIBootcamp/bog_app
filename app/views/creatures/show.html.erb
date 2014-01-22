@@ -2,3 +2,16 @@
 	Name: <%= @creature.name %> </br>
 	Description: <%= @creature.description %> </br>
 </div>
+
+</br>
+ <a href="/creatures/view_all"> View all creatures </a>
+
+
+</br>
+ <a href="/creatures/new"> Add a creature </a>
+
+
+<form action="/creatures/<%= @creature["id"] %>/delete" method="post">
+    <input type="submit" name="" value="Delete this creature.">
+   <%= token_tag form_authenticity_token %>
+</form>

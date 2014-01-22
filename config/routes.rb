@@ -15,6 +15,8 @@ BogApp::Application.routes.draw do
 
   get "/creatures/:id/edit", to: "creatures#edit"
 
+  post "/creatures/:id/delete", to: "creatures#delete"
+
   put "/creatures/:id", to: "creatures#update"
 
 end
